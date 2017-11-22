@@ -19,5 +19,5 @@
 		public $CashFlow;
 
 		#Band du User
-		#public $Band;
+		public $Band;
 	}

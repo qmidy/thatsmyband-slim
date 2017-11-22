@@ -25,4 +25,25 @@ $app->get('/', function (Request $request, Response $response, array $args) {
     return $this->renderer->render($response, 'index.phtml', $args);
 });
 
+$app->get('/band', function (Request $request, Response $response, array $args) {
+    // la date doit être au format yyyy-mm-dd
+
+    // Sample log message
+    $this->logger->info("Slim-Skeleton '/' route");
+
+    $args["expression"] = "Band";
+
+    // Appel du User
+    $userId = "123";
+    $userService = new UserService();
+    $user = $userService->GetUserById($userId);
+
+    $args["user"] = $user;
+
+    // Render index view
+    return $this->renderer->render($response, 'bandView.phtml', $args);
+});
+
+
+
 
