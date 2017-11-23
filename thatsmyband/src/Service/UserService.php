@@ -5,6 +5,11 @@
 	include_once '/../DataModel/Player.php';
 	include_once '/../DataModel/Track.php';
 	include_once '/../DataModel/Release.php';
+	include_once '/../DataModel/Schedule.php';
+	include_once '/../DataModel/EmptyEvent.php';
+	include_once '/../DataModel/RehearsalEvent.php';
+	include_once '/../DataModel/ShowEvent.php';
+	include_once '/../DataModel/RecordingEvent.php';
 
 	#Service d'accès aux User
 	Class UserService {
@@ -54,6 +59,20 @@
 			$release1->Name = "RELEASE1_NAME";
 			$release1->Tracks = array($track1, $track2);
 			$result->Band->Releases = array($release1);
+
+			# Schedule du Band
+			$result->Band->Schedule = new Schedule();
+			$result->Band->Schedule->Id = "SCHEDULE_ID";
+			# Events du Schedule
+			$event1 = new EmptyEvent();
+			$event1->Id = "EMPTYEVENT_ID";
+			$event2 = new RehearsalEvent();
+			$event2->Id = "REHEARSALEVENT_ID";
+			$event3 = new ShowEvent();
+			$event3->Id = "SHOWEVENT_ID";
+			$event4 = new RecordingEvent();
+			$event4->Id = "RECORDINGEVENT_ID";
+			$result->Band->Schedule->GenericEvents = array($event1, $event2, $event3, $event4);
 
 			return $result;
 		}

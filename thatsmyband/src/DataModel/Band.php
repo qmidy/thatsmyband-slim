@@ -23,4 +23,7 @@
 
 		#Tableau de Release du Band
 		public $Releases;
+
+		#Calendrier du Band
+		public $Schedule;
 	}
