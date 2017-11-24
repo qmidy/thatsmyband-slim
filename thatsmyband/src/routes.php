@@ -5,10 +5,17 @@ use Slim\Http\Response;
 
 include_once '/Service/UserService.php';
 
-// Routes
 $app->get('/', function (Request $request, Response $response, array $args) {
-    // Sample log message
     $this->logger->info("Slim-Skeleton '/' route");
+
+    // Render index view
+    return $this->renderer->render($response, 'indexTemplate.phtml', $args);
+});
+
+// Routes
+$app->get('/user', function (Request $request, Response $response, array $args) {
+    // Sample log message
+    $this->logger->info("Slim-Skeleton '/user' route");
 
     $args["expression"] = "Home";
 
@@ -20,7 +27,7 @@ $app->get('/', function (Request $request, Response $response, array $args) {
     $args["user"] = $user;
 
     // Render index view
-    return $this->renderer->render($response, 'index.phtml', $args);
+    return $this->renderer->render($response, 'userTemplate.phtml', $args);
 });
 
 $app->get('/band', function (Request $request, Response $response, array $args) {
@@ -37,7 +44,7 @@ $app->get('/band', function (Request $request, Response $response, array $args) 
     $args["user"] = $user;
 
     // Render index view
-    return $this->renderer->render($response, 'bandView.phtml', $args);
+    return $this->renderer->render($response, 'bandTemplate.phtml', $args);
 });
 
 $app->get('/schedule', function (Request $request, Response $response, array $args) {
@@ -54,7 +61,7 @@ $app->get('/schedule', function (Request $request, Response $response, array $ar
     $args["user"] = $user;
 
     // Render index view
-    return $this->renderer->render($response, 'scheduleView.phtml', $args);
+    return $this->renderer->render($response, 'scheduleTemplate.phtml', $args);
 });
 
 

@@ -27,8 +27,12 @@
     </head>
     <body>
         <h1><?= htmlspecialchars($expression); ?></h1>
-        <p><?= htmlspecialchars($user->Id); ?></p>
-        <p><?= htmlspecialchars($user->Name); ?></p>
-        <p><?= htmlspecialchars($user->CashFlow); ?></p>
+        <p><?= htmlspecialchars($user->Band->Id); ?></p>
+        <p><?= htmlspecialchars($user->Band->Name); ?></p>
+        <p><?= print_r($user->Band->Players); ?></p>
+        <p><?= print_r($user->Band->Tracks); ?></p>
+        <p><?= print_r($user->Band->Releases); ?></p>
+
+        <footer> <?php include('menuTemplate.phtml'); ?>  </footer>
     </body>
 </html>

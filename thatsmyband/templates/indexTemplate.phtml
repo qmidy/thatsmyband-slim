@@ -26,11 +26,8 @@
         </style>
     </head>
     <body>
-        <h1><?= htmlspecialchars($expression); ?></h1>
-        <p><?= htmlspecialchars($user->Band->Id); ?></p>
-        <p><?= htmlspecialchars($user->Band->Name); ?></p>
-        <p><?= print_r($user->Band->Players); ?></p>
-        <p><?= print_r($user->Band->Tracks); ?></p>
-        <p><?= print_r($user->Band->Releases); ?></p>
+        <h1>That's My Band</h1>
+
+        <footer> <?php include('menuTemplate.phtml'); ?>  </footer>
     </body>
 </html>
