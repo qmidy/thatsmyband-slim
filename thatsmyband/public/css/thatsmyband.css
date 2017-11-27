@@ -1,0 +1,47 @@
+body {
+
+}
+
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  margin: 20px;
+}
+
+/* Couleur de fond de l'application */
+/* https://coolors.co/bd081c-08415c-080f0f-a4bab7-f24333 */
+.thatsmyband_backgroundColor {
+	background-color: #08415C;
+}
+
+/* Menu */
+.thatsmyband_userButtonBackground {
+  display: inline-block;
+    height: 134px;
+    margin: 0;
+    vertical-align: top;
+}
+
+.thatsmyband_userButtonBackground img
+{
+  display: block;
+}
+
+.thatsmyband_bandButtonBackground {
+  background: url(../resources/images/bandButton.png);
+  background-size: 100%;
+}
+
+.thatsmyband_scheduleButtonBackground {
+  background: url(../resources/images/scheduleButton.png);
+  background-size: 100%;
+}
