@@ -13,7 +13,7 @@ header {
 footer {
   left: 0;
   bottom: 0;
-  height: 100px;
+  height: 200px;
   margin: 20px;
 }
 
@@ -24,24 +24,17 @@ footer {
 }
 
 /* Menu */
-.thatsmyband_userButtonBackground {
-  display: inline-block;
-    height: 134px;
-    margin: 0;
-    vertical-align: top;
+.thatsmyband_roundButton {
+  width: 100px;
+  height: 100px;
+  padding-bottom:10%;
+  border-radius:50%;
+  border: 0px;
+  overflow: hidden;
 }
-
-.thatsmyband_userButtonBackground img
+.thatsmyband_roundButtonBackground .img
 {
   display: block;
-}
-
-.thatsmyband_bandButtonBackground {
-  background: url(../resources/images/bandButton.png);
-  background-size: 100%;
-}
-
-.thatsmyband_scheduleButtonBackground {
-  background: url(../resources/images/scheduleButton.png);
-  background-size: 100%;
+  width: 50%;
+  height: 50%;
 }
