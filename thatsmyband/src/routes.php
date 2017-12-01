@@ -8,8 +8,10 @@ include_once '/Service/UserService.php';
 $app->get('/', function (Request $request, Response $response, array $args) {
     $this->logger->info("Slim-Skeleton '/' route");
 
+    $args["subTemplate"] = 'subtemplates/indexTemplate.phtml';
+
     // Render index view
-    return $this->renderer->render($response, 'indexTemplate.phtml', $args);
+    return $this->renderer->render($response, 'defaultTemplate.phtml', $args);
 });
 
 // Routes
@@ -26,8 +28,10 @@ $app->get('/user', function (Request $request, Response $response, array $args) 
 
     $args["user"] = $user;
 
+    $args["subTemplate"] = 'subtemplates/userTemplate.phtml';
+
     // Render index view
-    return $this->renderer->render($response, 'userTemplate.phtml', $args);
+    return $this->renderer->render($response, 'defaultTemplate.phtml', $args);
 });
 
 $app->get('/band', function (Request $request, Response $response, array $args) {
@@ -43,8 +47,10 @@ $app->get('/band', function (Request $request, Response $response, array $args) 
 
     $args["user"] = $user;
 
+    $args["subTemplate"] = 'subtemplates/bandTemplate.phtml';
+
     // Render index view
-    return $this->renderer->render($response, 'bandTemplate.phtml', $args);
+    return $this->renderer->render($response, 'defaultTemplate.phtml', $args);
 });
 
 $app->get('/schedule', function (Request $request, Response $response, array $args) {
@@ -60,8 +66,10 @@ $app->get('/schedule', function (Request $request, Response $response, array $ar
 
     $args["user"] = $user;
 
+    $args["subTemplate"] = 'subtemplates/scheduleTemplate.phtml';
+
     // Render index view
-    return $this->renderer->render($response, 'scheduleTemplate.phtml', $args);
+    return $this->renderer->render($response, 'defaultTemplate.phtml', $args);
 });
 
 

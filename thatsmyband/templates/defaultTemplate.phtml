@@ -7,13 +7,19 @@
         <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
-    <body>
-        
-        <h1><?= htmlspecialchars($expression); ?></h1>
-        <p><?= htmlspecialchars($user->Id); ?></p>
-        <p><?= htmlspecialchars($user->Name); ?></p>
-        <p><?= htmlspecialchars($user->CashFlow); ?></p>
-
+    <body class="thatsmyband_backgroundColor">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="col-xs-12 jumbotron">
+                    <header align="center">
+                        <p> That's My Band </p>
+                    </header>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <p><?= include(htmlspecialchars($subTemplate)); ?></p>
+            </div>
+        </div>
         <footer class="navbar-fixed-bottom"> <?php include('subtemplates/menuTemplate.phtml'); ?>  </footer>
     </body>
 </html>
