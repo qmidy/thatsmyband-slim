@@ -1,3 +1,14 @@
 <p><?= htmlspecialchars($user->Band->Schedule->Id); ?></p>
-<p><?= print_r($user->Band->Schedule->GenericEvents); ?></p>
 
+<?php	foreach ($user->Band->Schedule->GenericEvents as $key => $event) { ?>
+		<div class="row thatsmyband_avatarCard">
+			<div class="col-xs-4" align="center">
+			    <img src="resources/images/defaultScheduleEvent.png"/>
+			</div>
+			<div class="col-xs-8">
+				<p><b><?= htmlspecialchars($event->Id); ?></b></p>
+			</div>
+		</div>	
+<?php	} ?>
+
+<div class="row thatsmyband_avatarCard">
