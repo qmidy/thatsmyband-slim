@@ -5,8 +5,8 @@ body {
 header {
   position: relative;
   width: 100%;
-  height: 50px;
-  margin:10px;
+  height: 20px;
+  padding: 20px;
   color: #BD081C;
 }
 
@@ -15,6 +15,10 @@ footer {
   bottom: 0;
   height: 60px;
   margin: 0px;
+}
+
+.thatsmyband_subtemplate {
+  margin-top: 20px;
 }
 
 /* Couleur de fond de l'application */
@@ -40,16 +44,18 @@ footer {
 
 /* Avatar */
 .thatsmyband_avatarCard {
+  margin: 10px;
   /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
 
 .thatsmyband_avatarCard:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .thatsmyband_avatarCard .img {
   position: relative;
-  max-width:100%
+  height:100%
+  width:100%;
 }

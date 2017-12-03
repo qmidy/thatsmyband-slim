@@ -31,6 +31,7 @@
 			# Band du User
 			$result->Band = new Band();
 			$result->Band->Id = "BAND_ID";
+			$result->Band->Cohesion = "BAND_COHESION";
 			$result->Band->Name = "BAND_NAME";
 			# Players du Band
 			$player1 = new Player();

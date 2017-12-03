@@ -1,5 +1,54 @@
-<p><?= htmlspecialchars($user->Band->Id); ?></p>
-<p><?= htmlspecialchars($user->Band->Name); ?></p>
-<p><?= print_r($user->Band->Players); ?></p>
-<p><?= print_r($user->Band->Tracks); ?></p>
-<p><?= print_r($user->Band->Releases); ?></p>
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-lg-12">
+			<p><b><?= htmlspecialchars($user->Band->Name); ?></b></p>
+			<p><?= htmlspecialchars($user->Band->Id); ?></p>
+			<p><?= htmlspecialchars($user->Band->Cohesion); ?></p>
+		</div>
+	</div>
+
+	<?php	foreach ($user->Band->Players as $key => $player) { ?>
+			<div class="row thatsmyband_avatarCard">
+				<div class="col-lg-4" align="center">
+				    <img src="resources/images/defaultAvatar.png"/>
+				</div>
+				<div class="col-lg-8">
+					<p><b><?= htmlspecialchars($player->Name); ?></b></p>
+					<p><?= htmlspecialchars($player->Skill); ?></p>
+				</div>
+			</div>	
+	<?php	}
+	 ?>	
+
+		<div class="row thatsmyband_avatarCard">
+			<div class="col-lg-12" align="center">
+			    <img src="resources/images/defaultTrack.png"/>
+			</div>
+
+			<?php	foreach ($user->Band->Tracks as $key => $track) { ?>
+					<div class="col-lg-12">
+						<p><b><?= htmlspecialchars($track->Name); ?></b></p>
+					</div>
+			<?php	}
+		 	?>
+		</div>	
+
+		<div class="row thatsmyband_avatarCard">
+			<div class="col-lg-12" align="center">
+			    <img src="resources/images/defaultRelease.png"/>
+			</div>
+
+			<?php	foreach ($user->Band->Releases as $key => $release) { ?>
+					<div class="col-lg-12">
+						<p><b><?= htmlspecialchars($release->Name); ?></b></p>
+						<p><?= print_r($release->Tracks); ?></p>
+					</div>
+			<?php	}
+		 	?>
+		</div>	
+
+		<div class="row thatsmyband_avatarCard">
+
+		</div>
+</div>

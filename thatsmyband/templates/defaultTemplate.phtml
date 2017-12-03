@@ -10,9 +10,11 @@
     <body class="thatsmyband_backgroundColor">
         <div class="container-fluid">
 
-            <header> <?php include('subtemplates/headerTemplate.phtml'); ?>  </header>
+            <div class="row thatsmyband_subtemplate">
+                <header> <?php include('subtemplates/headerTemplate.phtml'); ?>  </header>
+            </div>
 
-            <div class="row-fluid">
+            <div class="row">
                 <p><?= include(htmlspecialchars($subTemplate)); ?></p>
             </div>
 

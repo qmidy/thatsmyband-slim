@@ -15,6 +15,9 @@
 		#Nom du Band
 		public $Name;
 
+		#Cohésion du Band
+		public $Cohesion;
+
 		#Tableau de Player du Band
 		public $Players;
 
