@@ -11,7 +11,7 @@
 	<?php	foreach ($user->Band->Players as $key => $player) { ?>
 			<div class="row thatsmyband_avatarCard">
 				<div class="col-xs-4" align="center">
-				    <img src="resources/images/defaultAvatar.png"/>
+				    <img class="img-circle img-responsive" src="resources/images/defaultAvatar.png"/>
 				</div>
 				<div class="col-xs-8">
 					<p><b><?= htmlspecialchars($player->Name); ?></b></p>
@@ -22,8 +22,8 @@
 	 ?>	
 
 		<div class="row thatsmyband_avatarCard">
-			<div class="col-xs-12" align="center">
-			    <img src="resources/images/defaultTrack.png"/>
+			<div  class="col-xs-12" align="center">
+			    <img class="img-circle img-responsive" src="resources/images/defaultTrack.png"/>
 			</div>
 
 			<?php	foreach ($user->Band->Tracks as $key => $track) { ?>
@@ -36,7 +36,7 @@
 
 		<div class="row thatsmyband_avatarCard">
 			<div class="col-xs-12" align="center">
-			    <img src="resources/images/defaultRelease.png"/>
+			    <img class="img-circle img-responsive" src="resources/images/defaultRelease.png"/>
 			</div>
 
 			<?php	foreach ($user->Band->Releases as $key => $release) { ?>
