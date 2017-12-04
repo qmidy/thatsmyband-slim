@@ -1,14 +1,26 @@
 <p><?= htmlspecialchars($user->Band->Schedule->Id); ?></p>
 
-<?php	foreach ($user->Band->Schedule->GenericEvents as $key => $event) { ?>
+<?php
+	$maxEventNumber = "0";
+	foreach ($user->Band->Schedule->GenericEvents as $key => $event) { ?>
 		<div class="row thatsmyband_avatarCard">
 			<div class="col-xs-4" align="center">
 			    <img class="img-circle img-responsive" src="resources/images/defaultScheduleEvent.png"/>
 			</div>
 			<div class="col-xs-8">
+				<p><b><?= htmlspecialchars($key); $maxEventNumber = $key; ?></b></p>
 				<p><b><?= htmlspecialchars($event->Id); ?></b></p>
 			</div>
 		</div>	
 <?php	} ?>
+	
+	<div class="row thatsmyband_avatarCard">
 
-<div class="row thatsmyband_avatarCard">
+		<div class="col-xs-4" align="center">
+			    <img class="img-circle img-responsive" src="resources/images/defaultScheduleEvent.png"/>
+			</div>
+			<div class="col-xs-8">
+				<p><b><?= $maxEventNumber = $key + 1; htmlspecialchars($maxEventNumber); ?></b></p>
+			</div>
+
+	</div>
