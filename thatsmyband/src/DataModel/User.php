@@ -20,4 +20,7 @@
 
 		#Band du User
 		public $Band;
+
+		#Tour du joueur (quel nombre de tours de jeu le joueur a effectué)
+		public $CurrentTime;
 	}

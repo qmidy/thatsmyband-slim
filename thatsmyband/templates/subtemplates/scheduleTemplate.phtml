@@ -2,25 +2,30 @@
 
 <?php
 	$maxEventNumber = "0";
-	foreach ($user->Band->Schedule->GenericEvents as $key => $event) { ?>
+	foreach ($user->Band->Schedule->GenericEvents as $key => $event) { 
+		if ($key >= $user->CurrentTime) {	?>
 		<div class="row thatsmyband_avatarCard">
 			<div class="col-xs-4" align="center">
 			    <img class="img-circle img-responsive" src="resources/images/defaultScheduleEvent.png"/>
 			</div>
 			<div class="col-xs-8">
-				<p><b><?= htmlspecialchars($key); $maxEventNumber = $key; ?></b></p>
+				<p><b><?= htmlspecialchars($key); $maxEventNumber = $key + 1; ?></b></p>
 				<p><b><?= htmlspecialchars($event->Id); ?></b></p>
 			</div>
 		</div>	
-<?php	} ?>
+<?php }	
+	} 
+	if($user->CurrentTime > $maxEventNumber)
+		$maxEventNumber = $user->CurrentTime;
+	?>
 	
 	<div class="row thatsmyband_avatarCard">
 
 		<div class="col-xs-4" align="center">
-			    <img class="img-circle img-responsive" src="resources/images/defaultScheduleEvent.png"/>
+			    <img class="img-circle img-responsive" src="resources/images/addButton.png"/>
 			</div>
 			<div class="col-xs-8">
-				<p><b><?= $maxEventNumber = $key + 1; htmlspecialchars($maxEventNumber); ?></b></p>
+				<p><b><?= htmlspecialchars($maxEventNumber); ?></b></p>
 			</div>
 
 	</div>

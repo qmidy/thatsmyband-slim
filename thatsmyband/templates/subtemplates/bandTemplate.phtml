@@ -22,30 +22,28 @@
 	 ?>	
 
 		<div class="row thatsmyband_avatarCard">
-			<div  class="col-xs-12" align="center">
+			<div  class="col-xs-4" align="center">
 			    <img class="img-circle img-responsive" src="resources/images/defaultTrack.png"/>
 			</div>
 
+			<div class="col-xs-8">
 			<?php	foreach ($user->Band->Tracks as $key => $track) { ?>
-					<div class="col-xs-12">
-						<p><b><?= htmlspecialchars($track->Name); ?></b></p>
-					</div>
-			<?php	}
-		 	?>
+						<p><b><?= htmlspecialchars($track->Name); ?></b></p>				
+			<?php	} 	?>
+			</div>
 		</div>	
 
 		<div class="row thatsmyband_avatarCard">
-			<div class="col-xs-12" align="center">
+			<div class="col-xs-4" align="center">
 			    <img class="img-circle img-responsive" src="resources/images/defaultRelease.png"/>
 			</div>
 
+			<div class="col-xs-8">
 			<?php	foreach ($user->Band->Releases as $key => $release) { ?>
-					<div class="col-xs-12">
 						<p><b><?= htmlspecialchars($release->Name); ?></b></p>
 						<p><?= print_r($release->Tracks); ?></p>
-					</div>
-			<?php	}
-		 	?>
+			<?php	} 	?>
+		 	</div>
 		</div>	
 
 		<div class="row thatsmyband_avatarCard">

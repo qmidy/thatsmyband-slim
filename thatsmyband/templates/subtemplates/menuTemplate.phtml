@@ -1,6 +1,6 @@
 <div class="row-fluid">
 	<div class="container-fluid thatsmyband_backgroundColor">
-		<div class="col-xs-4" align="center">
+		<div class="col-xs-3" align="center">
 			<div class="thatsmyband_roundButton">
 				<a href="user">
 					<img class="img-circle img-responsive" src="resources/images/userButton.png"/>
@@ -8,7 +8,7 @@
 			</div>
 		</div>
 
-		<div class="col-xs-4" align="center">
+		<div class="col-xs-3" align="center">
 			<div class="thatsmyband_roundButton">
 				<a href="band">
 					<img class="img-circle img-responsive" src="resources/images/bandButton.png"/>
@@ -16,12 +16,16 @@
 			</div>
 		</div>
 
-		<div class="col-xs-4" align="center">
+		<div class="col-xs-3" align="center">
 			<div class="thatsmyband_roundButton">
 				<a href="schedule">
 					<img class="img-circle img-responsive" src="resources/images/scheduleButton.png"/>
 				</a>
 			</div>
+		</div>
+
+		<div class="col-xs-3" align="center">
+			<p><b> Current Time : <?= htmlspecialchars($user->CurrentTime); ?></b></p>
 		</div>
 	</div>
 </div>
