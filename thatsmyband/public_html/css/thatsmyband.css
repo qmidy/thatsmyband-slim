@@ -1,5 +1,10 @@
-body {
+html {
+  position: relative;
+  min-height:100%;
+}
 
+body {
+  margin-bottom: 60px;
 }
 
 header {
@@ -11,11 +16,13 @@ header {
 }
 
 footer {
+  position:absolute;
   left: 0;
+  width:100%;
   bottom: 0;
   height: 80px;
-  padding: 80px;
   margin: 0px;
+
 }
 
 .thatsmyband_subtemplate {

@@ -1,4 +1,20 @@
-<p><?= htmlspecialchars($user->Band->Schedule->Id); ?></p>
+<div class="row">
+	<div class="col-xs-6" align="left">
+		<p>Band's schedule</p>
+	</div>
+	<div class="col-xs-6" align="right">
+		<p> Band's current time : <?= htmlspecialchars($user->CurrentTime) ?></p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-6" align="left">
+		<img class="img-circle img-responsive" src="resources/images/addButton.png"/>
+	</div>
+	<div class="col-xs-6" align="right">
+		<img class="img-circle img-responsive" src="resources/images/nextButton.png"/>
+	</div>
+</div>
 
 <?php
 	$maxEventNumber = "0";
@@ -18,14 +34,3 @@
 	if($user->CurrentTime > $maxEventNumber)
 		$maxEventNumber = $user->CurrentTime;
 	?>
-	
-	<div class="row thatsmyband_avatarCard">
-
-		<div class="col-xs-4" align="center">
-			    <img class="img-circle img-responsive" src="resources/images/addButton.png"/>
-			</div>
-			<div class="col-xs-8">
-				<p><b><?= htmlspecialchars($maxEventNumber); ?></b></p>
-			</div>
-
-	</div>
