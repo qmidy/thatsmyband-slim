@@ -11,4 +11,9 @@
 
 		}
 
+		#Méthode d'exécution de l'évènement
+		public function Execute($user)
+		{
+			
+		}
 	}
