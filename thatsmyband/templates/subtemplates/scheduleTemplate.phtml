@@ -12,7 +12,9 @@
 		<img class="img-circle img-responsive" src="resources/images/addButton.png"/>
 	</div>
 	<div class="col-xs-6" align="right">
-		<img class="img-circle img-responsive" src="resources/images/nextButton.png"/>
+		<a href="executeEvent">
+			<img class="img-circle img-responsive" src="resources/images/nextButton.png"/>
+		</a>
 	</div>
 </div>
 
@@ -22,7 +24,7 @@
 		if ($key >= $user->CurrentTime) {	?>
 		<div class="row thatsmyband_avatarCard">
 			<div class="col-xs-4" align="center">
-			    <img class="img-circle img-responsive" src="resources/images/defaultScheduleEvent.png"/>
+			   	<img class="img-circle img-responsive" src="resources/images/defaultScheduleEvent.png"/>
 			</div>
 			<div class="col-xs-8">
 				<p><b><?= htmlspecialchars($key); $maxEventNumber = $key + 1; ?></b></p>

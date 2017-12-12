@@ -10,7 +10,7 @@ $app->get('/', function (Request $request, Response $response, array $args) {
 
     $args["subTemplate"] = 'subtemplates/indexTemplate.phtml';
 
-    // Render index view
+    // Render view
     return $this->renderer->render($response, 'defaultTemplate.phtml', $args);
 });
 
@@ -28,7 +28,7 @@ $app->get('/user', function (Request $request, Response $response, array $args) 
 
     $args["subTemplate"] = 'subtemplates/userTemplate.phtml';
 
-    // Render index view
+    // Render view
     return $this->renderer->render($response, 'defaultTemplate.phtml', $args);
 });
 
@@ -45,7 +45,7 @@ $app->get('/band', function (Request $request, Response $response, array $args) 
 
     $args["subTemplate"] = 'subtemplates/bandTemplate.phtml';
 
-    // Render index view
+    // Render view
     return $this->renderer->render($response, 'defaultTemplate.phtml', $args);
 });
 
@@ -62,7 +62,25 @@ $app->get('/schedule', function (Request $request, Response $response, array $ar
 
     $args["subTemplate"] = 'subtemplates/scheduleTemplate.phtml';
 
-    // Render index view
+    // Render view
+    return $this->renderer->render($response, 'defaultTemplate.phtml', $args);
+});
+
+$app->get('/executeEvent', function(Request $request, Response $response, array $args) {
+    // Sample log message
+    $this->logger->info("Slim-Skeleton '/executeEvent' route");
+
+    // Appel du User
+    $userId = "123";
+    $userService = new UserService();
+    $user = $userService->GetUserById($userId);
+    $currentTime = $userService->ExecuteUserCurrentTime($user);
+
+    $args["user"] = $user;
+
+    $args["subTemplate"] = 'subtemplates/eventExecutionTemplate.phtml';
+
+    // Render View
     return $this->renderer->render($response, 'defaultTemplate.phtml', $args);
 });
 
