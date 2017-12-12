@@ -84,5 +84,23 @@ $app->get('/executeEvent', function(Request $request, Response $response, array 
     return $this->renderer->render($response, 'defaultTemplate.phtml', $args);
 });
 
+$app->get('/addEvent', function(Request $request, Response $response, array $args) {
+    // Sample log message
+    $this->logger->info("Slim-Skeleton '/addEvent' route");
+
+    // Appel du User
+    $userId = "123";
+    $userService = new UserService();
+    $user = $userService->GetUserById($userId);
+    $currentTime = $userService->ExecuteUserCurrentTime($user);
+
+    $args["user"] = $user;
+
+    $args["subTemplate"] = 'subtemplates/eventAddTemplate.phtml';
+
+    // Render View
+    return $this->renderer->render($response, 'defaultTemplate.phtml', $args);
+});
+
 
 

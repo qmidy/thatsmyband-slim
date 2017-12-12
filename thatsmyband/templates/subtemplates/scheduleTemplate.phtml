@@ -8,10 +8,12 @@
 </div>
 
 <div class="row">
-	<div class="col-xs-6" align="left">
-		<img class="img-circle img-responsive" src="resources/images/addButton.png"/>
+	<div class="col-xs-6 thatsmyband_boxShadow" align="left">
+		<a href="addEvent">
+			<img class="img-circle img-responsive" src="resources/images/addButton.png"/>
+		</a>
 	</div>
-	<div class="col-xs-6" align="right">
+	<div class="col-xs-6 thatsmyband_boxShadow" align="right">
 		<a href="executeEvent">
 			<img class="img-circle img-responsive" src="resources/images/nextButton.png"/>
 		</a>
@@ -22,7 +24,7 @@
 	$maxEventNumber = "0";
 	foreach ($user->Band->Schedule->GenericEvents as $key => $event) { 
 		if ($key >= $user->CurrentTime) {	?>
-		<div class="row thatsmyband_avatarCard">
+		<div class="row thatsmyband_avatarCard thatsmyband_boxShadow">
 			<div class="col-xs-4" align="center">
 			   	<img class="img-circle img-responsive" src="resources/images/defaultScheduleEvent.png"/>
 			</div>
