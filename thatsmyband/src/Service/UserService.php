@@ -27,7 +27,7 @@
 			$result->Id = "USER_ID";
 			$result->Name = "USER_NAME";
 			$result->CashFlow = "USER_CASHFLOW";
-			$result->CurrentTime = "0";
+			$result->CurrentTime = "1";
 			
 			# Band du User
 			$result->Band = new Band();
@@ -87,9 +87,12 @@
 
 			// L'événement met à jour les données du User (si cest une répé, nouveau morceau écrit... et mise à jour des stats)
 			// Et renvoie les différentiels pour les afficher dans l'interface sur l'événement.
-			$eventResult = $eventToExecute->Execute($user);
+			$eventToExecute->Execute($user);
 
 			// On incrémente le temps courant du User
 			$user->CurrentTime += 1;
+
+			// On retourne l'événement qu'on vient d'exécuter
+			return $eventToExecute;
 		}
 	}

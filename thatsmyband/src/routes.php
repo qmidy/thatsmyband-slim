@@ -74,7 +74,8 @@ $app->get('/executeEvent', function(Request $request, Response $response, array 
     $userId = "123";
     $userService = new UserService();
     $user = $userService->GetUserById($userId);
-    $currentTime = $userService->ExecuteUserCurrentTime($user);
+    
+    $args["event"] = $userService->ExecuteUserCurrentTime($user);
 
     $args["user"] = $user;
 
@@ -92,7 +93,6 @@ $app->get('/addEvent', function(Request $request, Response $response, array $arg
     $userId = "123";
     $userService = new UserService();
     $user = $userService->GetUserById($userId);
-    $currentTime = $userService->ExecuteUserCurrentTime($user);
 
     $args["user"] = $user;
 
