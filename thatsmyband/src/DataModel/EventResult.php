@@ -8,4 +8,7 @@
 		{
 
 		}
+
+		### Tableau de résultat d'un Event sur les Players ###
+		public $EventResultPlayers;
 	}
