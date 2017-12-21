@@ -2,7 +2,7 @@
 
 	include_once 'GenericEvent.php';
 	include_once 'EventResult.php';
-	include_once 'EventResultPlayer.php';
+	include_once '/../Service/BandService.php';
 
 	#DataModel d'un RehearsalEvent de calendrier
 	class RehearsalEvent extends GenericEvent {
@@ -16,26 +16,25 @@
 		#Méthode d'exécution de l'évènement
 		public function Execute($user)
 		{
-			### On récupère les Players avant de faire les traitements correspondant à l'event
-			$eventResultEventArray = array();
-			foreach ($user->Band->Players as $key => $value) {
-				$eventResultPlayer = new EventResultPlayer();
-				$eventResultPlayer->BeforeEventPlayer = new Player($value);
-				$eventResultEventArray[$key] = $eventResultPlayer;
-			}
+			### Construction du Result
+			$this->Result = new EventResult();
+
 			### On récupère les données du Band avant de faire les traitements correspondant à l'event
-			### TODO
+			$bandService = new BandService();
+			$this->Result->BandBeforeEvent = $bandService->DuplicateBand($user->Band);
 
 			### On applique les traitements de l'event
-			### TODO : Nouveau morceau
+			### Création d'un nouveau Track
+			$newTrack = new Track();
+			$newTrack->Name = "New Track";
+			array_push($user->Band->Tracks, $newTrack);
+
 			### Augmentation du Skill des player
 			foreach ($user->Band->Players as $key => $value) {
 				$value->Skill++;
-				$eventResultEventArray[$key]->AfterEventPlayer = $value;
 			}
 
-			### Construction du Result
-			$this->Result = new EventResult();
-			$this->Result->EventResultPlayers = $eventResultEventArray;
+			### Augmentation de la cohésion
+			$user->Band->Cohesion++;
 		}
 	}

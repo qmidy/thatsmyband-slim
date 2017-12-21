@@ -27,7 +27,7 @@
 			$result->Id = "USER_ID";
 			$result->Name = "USER_NAME";
 			$result->CashFlow = "USER_CASHFLOW";
-			$result->CurrentTime = "1";
+			$result->CurrentTime = "3";
 			
 			# Band du User
 			$result->Band = new Band();

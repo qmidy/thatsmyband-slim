@@ -9,6 +9,6 @@
 
 		}
 
-		### Tableau de résultat d'un Event sur les Players ###
-		public $EventResultPlayers;
+		### Objet Band avec l'exécution de l'évènement ###
+		public $BandBeforeEvent;
 	}
