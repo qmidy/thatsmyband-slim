@@ -24,7 +24,7 @@
 		public function GetUserById($userId)
 		{
 			$result = new User();
-			$result->Id = "USER_ID";
+			$result->Id = "1";
 			$result->Name = "USER_NAME";
 			$result->CashFlow = "USER_CASHFLOW";
 			$result->CurrentTime = "3";
