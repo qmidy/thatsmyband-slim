@@ -1,3 +1,1 @@
-1 - créer une base de données : "thatsmyband"
-
-2 - jouer le script : init.sql
+1 - jouer le script : init.sql

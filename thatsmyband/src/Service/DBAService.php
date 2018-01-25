@@ -9,6 +9,7 @@
 			$this->user = "root";
 			$this->passwd = "";
 			$this->bddname = "thatsmyband";
+			$this->Connect();
 		}
 
 		### Membres privés ####
