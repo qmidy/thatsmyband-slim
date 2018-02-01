@@ -31,9 +31,9 @@
 		{
 			$dbData = $this->dbaService->Query("SELECT userData FROM `usertable` WHERE `id` = 2")->fetch();
 
-			$result = unserialize($dbData["userData"]);
+			//echo json_encode($result);
 
-			echo serialize($result);
+			$result = json_decode($dbData["userData"]);
 
 			return $result;
 		}

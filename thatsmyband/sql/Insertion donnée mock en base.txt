@@ -1,47 +1,61 @@
-O: 4: 'User': 5: {
-	s: 2: 'Id';s: 1: '1';s: 4: 'Name';s: 9: 'USER_NAME';s: 8: 'CashFlow';s: 13: 'USER_CASHFLOW';s: 4: 'Band';O: 4: 'Band': 7: {
-		s: 2: 'Id';s: 7: 'BAND_ID';s: 4: 'Name';s: 9: 'BAND_NAME';s: 8: 'Cohesion';s: 13: 'BAND_COHESION';s: 7: 'Players';a: 2: {
-			i: 0;O: 6: 'Player': 3: {
-				s: 2: 'Id';s: 10: 'PLAYER1_ID';s: 4: 'Name';s: 12: 'PLAYER1_NAME';s: 5: 'Skill';s: 13: 'PLAYER1_SKILL';
-			}
-			i: 1;O: 6: 'Player': 3: {
-				s: 2: 'Id';s: 10: 'PLAYER2_ID';s: 4: 'Name';s: 12: 'PLAYER2_NAME';s: 5: 'Skill';s: 13: 'PLAYER2_SKILL';
-			}
+{
+	"Id": "1",
+	"Name": "USER_NAME",
+	"CashFlow": "USER_CASHFLOW",
+	"Band": {
+		"Id": "BAND_ID",
+		"Name": "BAND_NAME",
+		"Cohesion": "BAND_COHESION",
+		"Players": [{
+			"Id": "PLAYER1_ID",
+			"Name": "PLAYER1_NAME",
+			"Skill": "PLAYER1_SKILL"
+		}, {
+			"Id": "PLAYER2_ID",
+			"Name": "PLAYER2_NAME",
+			"Skill": "PLAYER2_SKILL"
+		}],
+		"Tracks": [{
+			"Id": "TRACK1_ID",
+			"Name": "TRACK1_NAME"
+		}, {
+			"Id": "TRACK2_ID",
+			"Name": "TRACK2_NAME"
+		}, {
+			"Id": "TRACK3_ID",
+			"Name": "TRACK3_NAME"
+		}],
+		"Releases": [{
+			"Id": "RELEASE1_ID",
+			"Name": "RELEASE1_NAME",
+			"Tracks": [{
+				"Id": "TRACK1_ID",
+				"Name": "TRACK1_NAME"
+			}, {
+				"Id": "TRACK2_ID",
+				"Name": "TRACK2_NAME"
+			}]
+		}],
+		"Schedule": {
+			"Id": "SCHEDULE_ID",
+			"GenericEvents": [{
+				"Type": null,
+				"Id": "EMPTYEVENT_ID",
+				"Result": null
+			}, {
+				"Type": "Rehearsal",
+				"Id": "REHEARSALEVENT_ID",
+				"Result": null
+			}, {
+				"Type": "Show",
+				"Id": "SHOWEVENT_ID",
+				"Result": null
+			}, {
+				"Type": "Recording",
+				"Id": "RECORDINGEVENT_ID",
+				"Result": null
+			}]
 		}
-		s: 6: 'Tracks';a: 3: {
-			i: 0;O: 5: 'Track': 2: {
-				s: 2: 'Id';s: 9: 'TRACK1_ID';s: 4: 'Name';s: 11: 'TRACK1_NAME';
-			}
-			i: 1;O: 5: 'Track': 2: {
-				s: 2: 'Id';s: 9: 'TRACK2_ID';s: 4: 'Name';s: 11: 'TRACK2_NAME';
-			}
-			i: 2;O: 5: 'Track': 2: {
-				s: 2: 'Id';s: 9: 'TRACK3_ID';s: 4: 'Name';s: 11: 'TRACK3_NAME';
-			}
-		}
-		s: 8: 'Releases';a: 1: {
-			i: 0;O: 7: 'Release': 3: {
-				s: 2: 'Id';s: 11: 'RELEASE1_ID';s: 4: 'Name';s: 13: 'RELEASE1_NAME';s: 6: 'Tracks';a: 2: {
-					i: 0;r: 19;i: 1;r: 22;
-				}
-			}
-		}
-		s: 8: 'Schedule';O: 8: 'Schedule': 2: {
-			s: 2: 'Id';s: 11: 'SCHEDULE_ID';s: 13: 'GenericEvents';a: 4: {
-				i: 0;O: 10: 'EmptyEvent': 3: {
-					s: 4: 'Type';N;s: 2: 'Id';s: 13: 'EMPTYEVENT_ID';s: 6: 'Result';N;
-				}
-				i: 1;O: 14: 'RehearsalEvent': 3: {
-					s: 4: 'Type';s: 9: 'Rehearsal';s: 2: 'Id';s: 17: 'REHEARSALEVENT_ID';s: 6: 'Result';N;
-				}
-				i: 2;O: 9: 'ShowEvent': 3: {
-					s: 4: 'Type';s: 4: 'Show';s: 2: 'Id';s: 12: 'SHOWEVENT_ID';s: 6: 'Result';N;
-				}
-				i: 3;O: 14: 'RecordingEvent': 3: {
-					s: 4: 'Type';s: 9: 'Recording';s: 2: 'Id';s: 17: 'RECORDINGEVENT_ID';s: 6: 'Result';N;
-				}
-			}
-		}
-	}
-	s: 11: 'CurrentTime';s: 1: '3';
+	},
+	"CurrentTime": "3"
 }
