@@ -17,10 +17,4 @@
 
 		#Résultat d'un GenericEvent
 		public $Result;
-
-		#Méthode d'exécution de l'évènement
-		public function Execute($user)
-		{
-				
-		}
 	}

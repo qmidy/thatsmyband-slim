@@ -4,6 +4,7 @@ use Slim\Http\Request;
 use Slim\Http\Response;
 
 include_once '/Service/UserService.php';
+include_once '/Service/EventService.php';
 
 $app->get('/', function (Request $request, Response $response, array $args) {
     $this->logger->info("Slim-Skeleton '/' route");
@@ -73,9 +74,10 @@ $app->get('/executeEvent', function(Request $request, Response $response, array 
     // Appel du User
     $userId = "123";
     $userService = new UserService();
+    $eventService = new EventService();
     $user = $userService->GetUserById($userId);
     
-    $args["event"] = $userService->ExecuteUserCurrentTime($user);
+    $args["event"] = $eventService->ExecuteCurrentTimeEvent($user);
 
     $args["user"] = $user;
 

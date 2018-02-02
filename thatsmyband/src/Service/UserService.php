@@ -37,21 +37,4 @@
 
 			return $result;
 		}
-
-		#Exécute le tour courant - Appelle la méthode Execute de l'événement correspondant
-		public function ExecuteUserCurrentTime($user)
-		{
-			// Récupération de l'événement courant (Test de nullité à prévoir)
-			$eventToExecute = $user->Band->Schedule->GenericEvents[$user->CurrentTime];
-
-			// L'événement met à jour les données du User (si cest une répé, nouveau morceau écrit... et mise à jour des stats)
-			// Et renvoie les différentiels pour les afficher dans l'interface sur l'événement.
-			$eventToExecute->Execute($user);
-
-			// On incrémente le temps courant du User
-			$user->CurrentTime += 1;
-
-			// On retourne l'événement qu'on vient d'exécuter
-			return $eventToExecute;
-		}
 	}
