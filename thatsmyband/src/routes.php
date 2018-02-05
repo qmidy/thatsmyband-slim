@@ -5,11 +5,16 @@ use Slim\Http\Response;
 
 include_once '/Service/UserService.php';
 include_once '/Service/EventService.php';
+include_once '/Service/FacebookService.php';
 
 $app->get('/', function (Request $request, Response $response, array $args) {
     $this->logger->info("Slim-Skeleton '/' route");
 
     $args["subTemplate"] = 'subtemplates/indexTemplate.phtml';
+
+    // Appel au service fb
+    $facebookService = new FacebookService();
+    $facebookService->GetUserId();
 
     // Render view
     return $this->renderer->render($response, 'defaultTemplate.phtml', $args);

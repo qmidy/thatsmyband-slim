@@ -8,6 +8,8 @@ class ComposerStaticInit7506f08c98c36e5159a82a03802ca2e5
 {
     public static $files = array (
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'c65d09b6820da036953a371c8c73a9b1' => __DIR__ . '/..' . '/facebook/graph-sdk/src/Facebook/polyfills.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -46,6 +48,7 @@ class ComposerStaticInit7506f08c98c36e5159a82a03802ca2e5
         'F' => 
         array (
             'FastRoute\\' => 10,
+            'Facebook\\' => 9,
         ),
         'D' => 
         array (
@@ -104,6 +107,10 @@ class ComposerStaticInit7506f08c98c36e5159a82a03802ca2e5
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+        ),
+        'Facebook\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/facebook/graph-sdk/src/Facebook',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
