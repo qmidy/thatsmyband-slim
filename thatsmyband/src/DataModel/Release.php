@@ -1,5 +1,7 @@
 <?php
 
+namespace DataModel;
+
 	#DataModel d'un Release (EP, LP ou Album)
 	class Release {
 

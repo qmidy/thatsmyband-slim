@@ -30,6 +30,7 @@ class ComposerStaticInit7506f08c98c36e5159a82a03802ca2e5
             'Symfony\\Component\\Yaml\\' => 23,
             'Slim\\Views\\' => 11,
             'Slim\\' => 5,
+            'Service\\' => 8,
         ),
         'P' => 
         array (
@@ -54,6 +55,7 @@ class ComposerStaticInit7506f08c98c36e5159a82a03802ca2e5
         array (
             'Doctrine\\Instantiator\\' => 22,
             'DeepCopy\\' => 9,
+            'DataModel\\' => 10,
         ),
     );
 
@@ -83,6 +85,10 @@ class ComposerStaticInit7506f08c98c36e5159a82a03802ca2e5
         'Slim\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
+        ),
+        'Service\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Service',
         ),
         'Psr\\Log\\' => 
         array (
@@ -119,6 +125,10 @@ class ComposerStaticInit7506f08c98c36e5159a82a03802ca2e5
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
+        'DataModel\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/DataModel',
         ),
     );
 

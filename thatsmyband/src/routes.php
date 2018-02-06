@@ -2,10 +2,9 @@
 
 use Slim\Http\Request;
 use Slim\Http\Response;
-
-include_once '/Service/UserService.php';
-include_once '/Service/EventService.php';
-include_once '/Service/FacebookService.php';
+use Service\UserService;
+use Service\EventService;
+use Service\FacebookService;
 
 $app->get('/', function (Request $request, Response $response, array $args) {
     $this->logger->info("Slim-Skeleton '/' route");

@@ -1,5 +1,7 @@
 <?php
 
+namespace DataModel;
+
 	#DataModel d'un Track (Morceau écrit par le groupe)
 	class Track {
 

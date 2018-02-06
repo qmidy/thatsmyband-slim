@@ -23,7 +23,9 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "DataModel\\": "src/DataModel/",
+            "Service\\": "src/Service/"
         }
     },
     "config": {

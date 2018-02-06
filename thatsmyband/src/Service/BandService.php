@@ -1,9 +1,11 @@
 <?php
 
-	include_once '/../DataModel/Band.php';
-	include_once '/../DataModel/Player.php';
-	include_once '/../DataModel/Track.php';
-	include_once '/../DataModel/Release.php';
+namespace Service;
+
+	use DataModel\Band;
+	use DataModel\Player;
+	use DataModel\Track;
+	use DataModel\Release;
 
 	#Service de Band
 	class BandService {

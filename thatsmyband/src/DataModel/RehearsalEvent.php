@@ -1,8 +1,8 @@
 <?php
 
-	include_once 'GenericEvent.php';
-	include_once 'EventResult.php';
-	include_once '/../Service/BandService.php';
+namespace DataModel;
+
+	use DataModel\GenericEvent;
 
 	#DataModel d'un RehearsalEvent de calendrier
 	class RehearsalEvent extends GenericEvent {

@@ -1,5 +1,7 @@
 <?php
 
+namespace DataModel;
+
 	#DataModel d'un groupe
 	class Band {
 

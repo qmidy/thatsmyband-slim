@@ -1,5 +1,9 @@
 <?php
 
+namespace Service;
+
+	use \PDO;
+
 	Class DBAService {
 
 		### Constructeur ###

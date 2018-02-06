@@ -1,16 +1,17 @@
 <?php
 
-	include_once '/../DataModel/User.php';
-	include_once '/../DataModel/Band.php';
-	include_once '/../DataModel/Player.php';
-	include_once '/../DataModel/Track.php';
-	include_once '/../DataModel/Release.php';
-	include_once '/../DataModel/Schedule.php';
-	include_once '/../DataModel/EmptyEvent.php';
-	include_once '/../DataModel/RehearsalEvent.php';
-	include_once '/../DataModel/ShowEvent.php';
-	include_once '/../DataModel/RecordingEvent.php';
-	include_once 'DBAService.php';
+namespace Service;
+
+	use DataModel\User;
+	use DataModel\Band;
+	use DataModel\Player;
+	use DataModel\Track;
+	use DataModel\Release;
+	use DataModel\EmptyEvent;
+	use DataModel\RehearsalEvent;
+	use DataModel\ShowEvent;
+	use DataModel\RecordingEvent;
+	use Service\DBAService;
 
 	#Service d'accès aux User
 	# TRAITEMENT A FAIRE APRES SERIALISATION

@@ -1,6 +1,8 @@
 <?php
 
-	include_once 'GenericEvent.php';
+namespace DataModel;
+
+	use DataModel\GenericEvent;
 
 	#DataModel d'un EmptyEvent de calendrier
 	class EmptyEvent extends GenericEvent {

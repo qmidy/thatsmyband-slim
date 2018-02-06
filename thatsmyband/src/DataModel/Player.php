@@ -1,5 +1,7 @@
 <?php
 
+namespace DataModel;
+
 	#DataModel d'un joueur
 	class Player {
 

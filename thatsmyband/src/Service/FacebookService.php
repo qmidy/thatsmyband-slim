@@ -1,5 +1,7 @@
 <?php
 
+namespace Service;
+
 	use Facebook\Facebook;
 	use Facebook\SignedRequest;
 

@@ -1,14 +1,16 @@
 <?php
 
-	include_once '/../DataModel/User.php';
-	include_once '/../DataModel/Band.php';
-	include_once '/../DataModel/GenericEvent.php';
-	include_once '/../DataModel/EmptyEvent.php';
-	include_once '/../DataModel/EventResult.php';
-	include_once '/../DataModel/RecordingEvent.php';
-	include_once '/../DataModel/RehearsalEvent.php';
-	include_once '/../DataModel/ShowEvent.php';
-	include_once 'BandService.php';
+namespace Service;
+
+	use DataModel\User;
+	use DataModel\Band;
+	use DataModel\GenericEvent;
+	use DataModel\EmptyEvent;
+	use DataModel\EventResult;
+	use DataModel\RecordingEvent;
+	use DataModel\RehearsalEvent;
+	use DataModel\ShowEvent;
+	use Service\BandService;
 
 	#Service d'Event
 	class EventService {

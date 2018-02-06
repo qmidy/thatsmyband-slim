@@ -1,5 +1,7 @@
 <?php
 
+namespace DataModel;
+
 	#DataModel de l'utilisateur de l'application
 	class User {
 

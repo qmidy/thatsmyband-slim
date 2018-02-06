@@ -1,5 +1,7 @@
 <?php
 
+namespace DataModel;
+
 	#DataModel d'un Event de calendrier générique
 	abstract class GenericEvent {
 

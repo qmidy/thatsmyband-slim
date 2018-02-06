@@ -1,5 +1,7 @@
 <?php
 
+namespace DataModel;
+
 	#DataModel du résultat d'un GenericEvent
 	class EventResult {
 
