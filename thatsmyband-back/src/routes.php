@@ -118,5 +118,5 @@ $app->get('/userdata', function(Request $request, Response $response, array $arg
     $userService = new UserService();
     $user = $userService->GetUserById($userId);
 
-    return $response->withJson($user);
+    return $response->withJson($user)->withAddedHeader('Access-Control-Allow-Origin', '*');
 });
