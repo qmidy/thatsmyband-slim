@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { User } from '../datamodel/user';
 import { UserService } from '../service/user.service';
 
@@ -6,11 +7,11 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  selector: 'app-band',
+  templateUrl: './band.component.html',
+  styleUrls: ['./band.component.css']
 })
-export class UserComponent implements OnInit {
+export class BandComponent implements OnInit {
 
   user: User;
 

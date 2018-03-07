@@ -1,0 +1,32 @@
+<p>
+  {{user.Band.Id}} {{user.Band.Name}} {{user.Band.Cohesion}}
+</p>
+
+<p> Players </p>
+
+  <ul>
+    <li *ngFor="let player of user.Band.Players">
+      {{ player.Id }} {{ player.Name }} {{ player.Skill }}
+    </li>
+  </ul>
+
+  <p> Tracks </p>
+
+  <ul>
+    <li *ngFor="let track of user.Band.Tracks">
+      {{ track.Id }} {{ track.Name }}
+    </li>
+  </ul>
+
+  <p> Releases </p>
+
+  <ul>
+    <li *ngFor="let release of user.Band.Releases">
+      {{ release.Id }} {{ release.Name }}
+      <ul>
+      	<li *ngFor="let track of release.Tracks">
+      		{{ track.Id }} {{ track.Name }}
+      	</li>
+      </ul>
+    </li>
+  </ul>

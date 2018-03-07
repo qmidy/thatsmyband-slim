@@ -1,5 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
   <h1> {{ title }}! </h1>
-  <app-user></app-user>
+  <nav>
+    <a routerLink="/user">User</a>
+    <a routerLink="/band">Band</a>
+    <a routerLink="/schedule">Schedule</a>
+  </nav>
+  <router-outlet></router-outlet>
 
