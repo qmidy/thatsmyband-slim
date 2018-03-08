@@ -1,8 +1,26 @@
-  <h1> {{ title }}! </h1>
-  <nav>
-    <a routerLink="/user">User</a>
-    <a routerLink="/band">Band</a>
-    <a routerLink="/schedule">Schedule</a>
-  </nav>
-  <router-outlet></router-outlet>
+<div class="container-fluid">
 
+	<div class="row justify-content-center">
+  		<h1 class="display-4"> {{ title }} </h1>
+  	</div>
+
+	<div class="row justify-content-center">
+	  <router-outlet></router-outlet>
+	</div>
+
+
+	   <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+		  <ul class="navbar-nav mr-auto">
+		   <li class="nav-item">
+		    <a class="nav-link" routerLink="/user">User</a>
+		   </li>
+		   <li class="nav-item">
+		    <a class="nav-link" routerLink="/band">Band</a>
+		   </li>
+		   <li class="nav-item">
+		    <a class="nav-link" routerLink="/schedule">Schedule</a>
+		   </li>
+		  </ul>
+	  	</nav>
+
+  </div>

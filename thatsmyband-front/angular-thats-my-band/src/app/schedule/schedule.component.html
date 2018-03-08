@@ -1,3 +1,11 @@
 <p>
-  schedule works!
+  {{user.Band.Schedule.Id}}
 </p>
+
+<p> Events </p>
+
+  <ul>
+    <li *ngFor="let genericEvent of user.Band.Schedule.GenericEvents">
+      {{ genericEvent.Id }} {{ genericEvent.Type }}
+    </li>
+  </ul>
