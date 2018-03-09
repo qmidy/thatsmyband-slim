@@ -1,14 +1,14 @@
 <div class="container-fluid">
 
-	<div class="row justify-content-center">
+	<div class="flex-row justify-content-center">
   		<h1 class="display-4"> {{ title }} </h1>
   	</div>
 
-	<div class="row justify-content-center">
+	<div class="flex-row justify-content-center">
 	  <router-outlet></router-outlet>
 	</div>
 
-
+	<div class="flex-row">
 	   <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
 		  <ul class="navbar-nav mr-auto">
 		   <li class="nav-item">
@@ -22,5 +22,5 @@
 		   </li>
 		  </ul>
 	  	</nav>
-
+	  </div>
   </div>

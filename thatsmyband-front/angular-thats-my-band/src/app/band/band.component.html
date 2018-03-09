@@ -1,32 +1,40 @@
-<p>
-  {{user.Band.Id}} {{user.Band.Name}} {{user.Band.Cohesion}}
-</p>
+<h2> BAND </h2>
 
-<p> Players </p>
+<h3> {{user.Band.Name}} {{user.Band.Cohesion}} </h3>
+
+<h4> Players </h4>
 
   <ul>
     <li *ngFor="let player of user.Band.Players">
-      {{ player.Id }} {{ player.Name }} {{ player.Skill }}
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <h5 class="card-title"> {{ player.Name }} </h5>
+          <p class="card-text"> {{ player.Skill }} </p>
+        </div>
+
+      </div>
     </li>
   </ul>
 
-  <p> Tracks </p>
-
-  <ul>
-    <li *ngFor="let track of user.Band.Tracks">
-      {{ track.Id }} {{ track.Name }}
-    </li>
-  </ul>
-
-  <p> Releases </p>
+  <h4> Releases </h4>
 
   <ul>
     <li *ngFor="let release of user.Band.Releases">
-      {{ release.Id }} {{ release.Name }}
-      <ul>
-      	<li *ngFor="let track of release.Tracks">
-      		{{ track.Id }} {{ track.Name }}
-      	</li>
-      </ul>
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"> {{ release.Name }} </h5>
+        <ul>
+          <p class="card-text">
+        	<li *ngFor="let track of release.Tracks">
+        		{{ track.Id }} {{ track.Name }}
+        	</li>
+        </p>
+        </ul>
+      </div>
+    </div>
+
     </li>
   </ul>
