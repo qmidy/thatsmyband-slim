@@ -15,17 +15,13 @@
 </div>
 
 <div class="flex-row">
-
-	<div class="btn-group btn-group-lg" role="group" aria-label="...">
-		
-		<button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapseOne">1</button>
-	  	<button type="button" class="btn btn-secondary">2</button>
-	  	<button type="button" class="btn btn-secondary">3</button>
-	  	<button type="button" class="btn btn-secondary">4</button>
-	  	<button type="button" class="btn btn-secondary">5</button>
-
+	<div class="btn-group btn-group-lg" role="group">
+		<button *ngFor="let genericEvent of user.Band.Schedule.GenericEvents" type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapseOne">
+			{{genericEvent.Id}}
+		</button>
 	</div>
 </div>
+
 
 <div class="flex-row">
 

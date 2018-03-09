@@ -14,7 +14,7 @@ import { Location } from '@angular/common';
 export class ScheduleComponent implements OnInit {
 
   user: User;
-
+  
   constructor(
   	private route: ActivatedRoute,
   	private userService: UserService,
