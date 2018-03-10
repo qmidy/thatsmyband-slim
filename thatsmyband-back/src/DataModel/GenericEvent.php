@@ -16,7 +16,4 @@ namespace DataModel;
 
 		#Id du GenericEvent
 		public $Id;
-
-		#Résultat d'un GenericEvent
-		public $Result;
 	}

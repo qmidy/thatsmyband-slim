@@ -40,20 +40,16 @@
 			"Id": "SCHEDULE_ID",
 			"GenericEvents": [{
 				"Type": null,
-				"Id": "EMPTYEVENT_ID",
-				"Result": null
+				"Id": "EMPTYEVENT_ID"
 			}, {
 				"Type": "Rehearsal",
-				"Id": "REHEARSALEVENT_ID",
-				"Result": null
+				"Id": "REHEARSALEVENT_ID"
 			}, {
 				"Type": "Show",
-				"Id": "SHOWEVENT_ID",
-				"Result": null
+				"Id": "SHOWEVENT_ID"
 			}, {
 				"Type": "Recording",
-				"Id": "RECORDINGEVENT_ID",
-				"Result": null
+				"Id": "RECORDINGEVENT_ID"
 			}]
 		}
 	},

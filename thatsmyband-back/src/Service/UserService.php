@@ -30,7 +30,7 @@ namespace Service;
 		#Renvoie le User en fonction de son Id
 		public function GetUserById($userId)
 		{
-			$dbData = $this->dbaService->Query("SELECT userData FROM `usertable` WHERE `id` = 2")->fetch();
+			$dbData = $this->dbaService->Query("SELECT userData FROM `usertable` WHERE `id` = 1")->fetch();
 
 			//echo json_encode($result);
 
