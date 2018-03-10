@@ -15,27 +15,15 @@
 </div>
 
 <div class="flex-row">
-	<div class="btn-group btn-group-lg" role="group">
-		<button *ngFor="let genericEvent of user.Band.Schedule.GenericEvents" type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapseOne">
-			{{genericEvent.Id}}
+	<div class="btn-group btn-group-lg" role="group">	
+		
+		<button *ngFor="let genericEvent of user.Band.Schedule.GenericEvents" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  			{{genericEvent.Type}}
 		</button>
+
+		<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  		Popover on top
+		</button>
+
 	</div>
-</div>
-
-
-<div class="flex-row">
-
-	<div class="collapse" id="collapseOne">
-		<!--Panel-->
-	    <div class="card card-body">
-	        <h4 class="card-title">Panel title</h4>
-    	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	        <div class="flex-row">
-	            <a class="card-link">Card link</a>
-	            <a class="card-link">Another link</a>
-	        </div>
-	    </div>
-	    <!--/.Panel-->
-	</div>
-
 </div>
