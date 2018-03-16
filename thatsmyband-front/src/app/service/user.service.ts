@@ -13,7 +13,7 @@ const httpOptions = {
 @Injectable()
 export class UserService {
 
-  private userUrl = "http://localhost/thatsmyband-slim/thatsmyband-slim/thatsmyband-back/public_html/userdata";
+  private userUrl = "http://localhost:8888/userdata";
 
   constructor(private http: HttpClient) { }
 
