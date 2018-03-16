@@ -10,13 +10,15 @@ import { ScheduleComponent } from './schedule/schedule.component';
 
 import { UserService } from './service/user.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { ScheduleEventComponent } from './schedule-event/schedule-event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     BandComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    ScheduleEventComponent
   ],
   imports: [
     BrowserModule,
