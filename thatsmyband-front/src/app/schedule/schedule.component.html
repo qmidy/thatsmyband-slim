@@ -1,25 +1,28 @@
 <h2 class="text-white"> SCHEDULE </h2>
 
 <div class="flex-row">
-<h3 class="text-white"> Events </h3>
-
-  <ul>
-    <li *ngFor="let genericEvent of user.Band.Schedule.GenericEvents" class="text-white">
-      {{ genericEvent.Id }} {{ genericEvent.Type }}
-    </li>
-  </ul>
-</div>
-
-<div class="flex-row">
-	<h3 class="text-white"> Calendar </h3>
+	<h3 class="text-white"> Next events </h3>
 </div>
 
 <div class="flex-row">
 	<div class="btn-group btn-group-lg" role="group">	
 		
-		<a *ngFor="let genericEvent of user.Band.Schedule.GenericEvents" type="button" class="text-white btn btn-secondary" routerLink="/scheduleEvent/{{genericEvent.Id}}">
-  			{{genericEvent.Type}}
-		</a>
+		<!-- On affiche les 5 prochains events, si il n'y a pas d'events de prévu, on affiche "New / Nouveau" -->
+		<div *ngFor="let nextEvent of nextEvents">
+			<div *ngIf="nextEvent.Type != null; then filledTemplate else emptyTemplate"> </div> 
+			
+			<ng-template #filledTemplate>
+				<a type="button" class="text-white btn btn-secondary" routerLink="/scheduleEvent/{{nextEvent.Id}}">
+				{{nextEvent.Type}}
+				</a>
+			</ng-template>
 
+			<ng-template #emptyTemplate>
+				<a type="button" class="text-white btn btn-secondary" routerLink="/createnewevent">
+  					NEW	
+  				</a>
+  			</ng-template>
+			
+		</div>
 	</div>
 </div>
