@@ -1,6 +1,5 @@
 .navbar {
-	background-image: url("../resources/menu_background.jpg");
-	background-size:cover;
+  background: #ffc125;
 }
 
 .navbar-toggle .icon-bar {
@@ -21,10 +20,8 @@
 }
 
 .thatsmyband-maincontent {
-	background-image: url("../resources/maincontent_background.jpg");
-	background-size:cover;
-    height: 100%;
-
+	background: #636363;
+  height: 100%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
