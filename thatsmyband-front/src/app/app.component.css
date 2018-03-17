@@ -1,5 +1,6 @@
 .navbar {
-	background: radial-gradient(ellipse at center top, gold, slategray);
+	background-image: url("../resources/menu_background.jpg");
+	background-size:cover;
 }
 
 .navbar-toggle .icon-bar {
@@ -20,7 +21,8 @@
 }
 
 .thatsmyband-maincontent {
-	background: radial-gradient(ellipse at center bottom, black, slategray);
+	background-image: url("../resources/maincontent_background.jpg");
+	background-size:cover;
     height: 100%;
 
     -moz-box-sizing: border-box;
