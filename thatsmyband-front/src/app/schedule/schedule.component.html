@@ -1,23 +1,23 @@
-<h2> SCHEDULE </h2>
+<h2 class="text-white"> SCHEDULE </h2>
 
 <div class="flex-row">
-<h3> Events </h3>
+<h3 class="text-white"> Events </h3>
 
   <ul>
-    <li *ngFor="let genericEvent of user.Band.Schedule.GenericEvents">
+    <li *ngFor="let genericEvent of user.Band.Schedule.GenericEvents" class="text-white">
       {{ genericEvent.Id }} {{ genericEvent.Type }}
     </li>
   </ul>
 </div>
 
 <div class="flex-row">
-	<h3> Calendar </h3>
+	<h3 class="text-white"> Calendar </h3>
 </div>
 
 <div class="flex-row">
 	<div class="btn-group btn-group-lg" role="group">	
 		
-		<a *ngFor="let genericEvent of user.Band.Schedule.GenericEvents" type="button" class="btn btn-secondary" routerLink="/scheduleEvent/{{genericEvent.Id}}">
+		<a *ngFor="let genericEvent of user.Band.Schedule.GenericEvents" type="button" class="text-white btn btn-secondary" routerLink="/scheduleEvent/{{genericEvent.Id}}">
   			{{genericEvent.Type}}
 		</a>
 
