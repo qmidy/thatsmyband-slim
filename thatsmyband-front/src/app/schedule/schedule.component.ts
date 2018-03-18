@@ -32,11 +32,9 @@ export class ScheduleComponent implements OnInit {
       this.user = user;
       this.nextEvents  = new Array(5).fill().map( (x,i) => {
           var index = Number(i) + Number(user.CurrentTime); 
-          if(user.Band.Schedule.GenericEvents.length < index) {
-            console.log('if');
+          if(index < user.Band.Schedule.GenericEvents.length) {
             return user.Band.Schedule.GenericEvents[index];
           } else {
-            console.log('else');
             return new GenericEvent();
           }
         });

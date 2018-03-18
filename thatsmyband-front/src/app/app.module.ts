@@ -11,6 +11,8 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { UserService } from './service/user.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ScheduleEventComponent } from './schedule-event/schedule-event.component';
+import { ScheduleNewEventComponent } from './schedule-new-event/schedule-new-event.component';
+import { ScheduleRunEventComponent } from './schedule-run-event/schedule-run-event.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ScheduleEventComponent } from './schedule-event/schedule-event.componen
     UserComponent,
     BandComponent,
     ScheduleComponent,
-    ScheduleEventComponent
+    ScheduleEventComponent,
+    ScheduleNewEventComponent,
+    ScheduleRunEventComponent
   ],
   imports: [
     BrowserModule,
