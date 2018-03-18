@@ -6,29 +6,53 @@
 
 <div class="flex-row">
 	<div class="btn-group btn-group-lg" role="group">	
-		
-		<!-- On affiche les 5 prochains events, si il n'y a pas d'events de prévu, on affiche "New / Nouveau" -->
-		<div *ngFor="let nextEvent of nextEvents">
-			<div *ngIf="nextEvent.Type != null; then filledTemplate else emptyTemplate"> </div> 
-			
-			<ng-template #filledTemplate>
-				<a type="button" class="text-white btn btn-secondary" routerLink="/scheduleEvent/{{nextEvent.Id}}">
-				{{nextEvent.Type}}
-				</a>
-			</ng-template>
+		<!-- On affiche les cinq prochains events -->
+		<section class="timeline">
+  			<ul>
+  				<div *ngFor="let nextEvent of nextEvents; let i = index" [attr.data-index]="i">
+					<div *ngIf="nextEvent.Type != null; then filledTemplate else emptyTemplate"> </div> 				
 
-			<ng-template #emptyTemplate>
-				<a type="button" class="text-white btn btn-secondary" routerLink="/createNewEvent">
-  					NEW	
-  				</a>
-  			</ng-template>
-			
-		</div>
+					<ng-template #filledTemplate>
+						<!-- Si le premier event est instancié (différent de Empty) On propose le lien vers RunCurrentEvent -->
+						<div *ngIf="i == 0; then firstFilledTemplate else notFirstFilledTemplate"> </div>
+
+						<ng-template #firstFilledTemplate>
+							<li>
+								<div>
+									<a type="button" class="text-white btn btn-secondary" routerLink="/runCurrentEvent">
+  									RUN {{nextEvent.Type}} 	
+  									</a>
+  								</div>
+  							</li>
+						</ng-template>
+
+						<ng-template #notFirstFilledTemplate>
+							<li>
+								<div>
+									<a type="button" class="text-white btn btn-secondary" routerLink="/scheduleEvent/{{nextEvent.Id}}">
+										{{nextEvent.Type}}
+									</a>
+								</div>
+							</li>
+						</ng-template>
+					</ng-template>
+
+					<ng-template #emptyTemplate>
+						<li>
+							<div>
+								<a type="button" class="text-white btn btn-secondary" routerLink="/createNewEvent">
+  									NEW	
+  								</a>
+  							</div>
+  						</li>
+  					</ng-template>
+
+  				</div>
+  			</ul>
+		</section>
 	</div>
 </div>
 
 <div class="flex-row">
-	<a type="button" class="text-white btn btn-secondary" routerLink="/runCurrentEvent">
-  					RUN CURRENT EVENT	
-  	</a>
+
 </div>

@@ -14,7 +14,7 @@ import { Location } from '@angular/common';
 })
 export class ScheduleComponent implements OnInit {
 
-  nextEvents: Array;
+  nextEvents: Array<GenericEvent>;
   user: User;
   
   constructor(
@@ -30,7 +30,7 @@ export class ScheduleComponent implements OnInit {
   getUser() : void {
   	this.userService.getUser().subscribe((user) => { 
       this.user = user;
-      this.nextEvents  = new Array(5).fill().map( (x,i) => {
+      this.nextEvents  = new Array<GenericEvent>(5).fill(null).map((x,i) => {
           var index = Number(i) + Number(user.CurrentTime); 
           if(index < user.Band.Schedule.GenericEvents.length) {
             return user.Band.Schedule.GenericEvents[index];
