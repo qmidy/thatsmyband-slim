@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ScheduleEventComponent } from './schedule-event/schedule-event.component';
 import { ScheduleNewEventComponent } from './schedule-new-event/schedule-new-event.component';
 import { ScheduleRunEventComponent } from './schedule-run-event/schedule-run-event.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ScheduleRunEventComponent } from './schedule-run-event/schedule-run-eve
     ScheduleComponent,
     ScheduleEventComponent,
     ScheduleNewEventComponent,
-    ScheduleRunEventComponent
+    ScheduleRunEventComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { ScheduleComponent } from '../schedule/schedule.component';
 import { ScheduleEventComponent } from '../schedule-event/schedule-event.component';
 import { ScheduleNewEventComponent } from '../schedule-new-event/schedule-new-event.component';
 import { ScheduleRunEventComponent } from '../schedule-run-event/schedule-run-event.component';
+import { AboutComponent } from '../about/about.component';
  
 const routes: Routes = [
   { path: '', redirectTo: '/user', pathMatch: 'full' },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'schedule', component: ScheduleComponent },
   { path: 'scheduleEvent/:id', component: ScheduleEventComponent },
   { path: 'createNewEvent', component: ScheduleNewEventComponent },
-  { path: 'runCurrentEvent', component: ScheduleRunEventComponent }
+  { path: 'runCurrentEvent', component: ScheduleRunEventComponent },
+  { path: 'about', component: AboutComponent }
 ];
  
 @NgModule({
