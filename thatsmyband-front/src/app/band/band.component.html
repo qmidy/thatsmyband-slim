@@ -1,42 +1,38 @@
-<h2 class="text-white"> 
-  BAND
-</h2>
+<div class="row">
+  <h3 class="text-white"> {{user.Band.Name}} </h3>
+</div>
 
-<h3 class="text-white"> {{user.Band.Name}} {{user.Band.Cohesion}} </h3>
+<div class="row thatsmyband-bandlinedivinfo">
+  <p class="thatsmyband-bandlinecontentinfo text-white"> Band Cohesion : {{user.Band.Cohesion}} </p>
+</div>
 
-<h4 class="text-white"> Players </h4>
+<div class="row">
+  <h4 class="text-white"> Players </h4>
+</div>
 
   <ul>
     <li *ngFor="let player of user.Band.Players">
-
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <h5 class="card-title"> {{ player.Name }} </h5>
-          <p class="card-text"> {{ player.Skill }} </p>
-        </div>
-
-      </div>
+          <h5> {{ player.Name }} </h5>
+          <p> {{ player.Skill }} </p>
     </li>
   </ul>
 
+<div class="row">
   <h4 class="text-white"> Releases </h4>
+</div>
 
   <ul>
     <li *ngFor="let release of user.Band.Releases">
 
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title"> {{ release.Name }} </h5>
+          <h5> {{ release.Name }} </h5>
+
         <ul>
-          <p class="card-text">
+          <p>
         	<li *ngFor="let track of release.Tracks">
         		{{ track.Id }} {{ track.Name }}
         	</li>
         </p>
         </ul>
-      </div>
-    </div>
 
     </li>
   </ul>

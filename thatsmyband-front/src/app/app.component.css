@@ -17,9 +17,9 @@
   background-image: url('assets/resources/046-flash.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  background-color: transparent;
   height: 40px;
   width: 40px;
-  background-color: transparent;
   border: 0px;
 }
 
