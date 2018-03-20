@@ -1,5 +1,7 @@
 .navbar {
-  background: #ffc125;
+  background-image:url('assets/resources/cover_picture.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .navbar-toggle .icon-bar {
