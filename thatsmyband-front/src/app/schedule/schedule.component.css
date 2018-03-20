@@ -40,11 +40,26 @@
 .timeline ul li div {
   position: relative;
   bottom: 0;
-  width: 20px;
-  padding: 15px;
-  background: black;
+  padding: 10px;
+  width: 150px;
+  height: auto;
+  -webkit-transform: skew(20deg);
+  -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
 }
  
+.timeline ul li div a {
+  width: inherit;
+  height: inherit;
+  background: black;
+}
+
+.timeline ul li div a p {
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+}
+
 .timeline ul li div::before {
   content: '';
   position: absolute;
@@ -55,7 +70,7 @@
 }
 
 .timeline ul li:nth-child(odd) div {
-  left: 45px;
+  left: 25px;
 }
  
 .timeline ul li:nth-child(odd) div::before {

@@ -22,7 +22,9 @@
 							<li>
 								<div>
 									<a type="button" class="text-white btn btn-secondary firstTimeLineElement" routerLink="/runCurrentEvent">
-  									RUN {{nextEvent.Type}} 	
+									<p>
+  									RUN {{nextEvent.Type}}
+  									</p> 	
   									</a>
   								</div>
   							</li>
@@ -32,7 +34,9 @@
 							<li>
 								<div>
 									<a type="button" class="text-white btn btn-secondary" routerLink="/scheduleEvent/{{nextEvent.Id}}">
+										<p>
 										{{nextEvent.Type}}
+										</p>
 									</a>
 								</div>
 							</li>
@@ -43,7 +47,9 @@
 						<li>
 							<div>
 								<a type="button" class="text-white btn btn-secondary" routerLink="/createNewEvent">
-  									NEW	
+									<p>
+  									NEW
+  									</p>	
   								</a>
   							</div>
   						</li>
