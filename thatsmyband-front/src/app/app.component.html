@@ -1,5 +1,5 @@
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
+<div class="container-fluid">
+	<nav class="row navbar navbar-default">
 			<div class="navbar-header">
 			  		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-content" aria-expanded="false">
 			  			<h1 class="navbar-brand"> {{title}} </h1>
@@ -22,13 +22,11 @@
 			   </li>
 			  </ul>
 			</div>
-		</div>
 	</nav>
 
-	<div class="container-fluid thatsmyband-maincontent">
-		<div class="row">
-			<div class="span6" style="float: none; margin: 0 auto;">
-	  			<router-outlet></router-outlet>
-	  		</div>
+	<div class="row thatsmyband-maincontent">
+		<div class="span6" style="float: none; margin: 0 auto;">
+	  		<router-outlet></router-outlet>
 	  	</div>
 	</div>
+</div>
