@@ -34,3 +34,8 @@
     box-sizing: border-box;
     height: 100%;
 }
+
+.thatsmyband-footercontent {
+  background: #707070;
+  height: 80px;
+}
