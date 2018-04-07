@@ -9,6 +9,8 @@ import { BandComponent } from './band/band.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 
 import { UserService } from './service/user.service';
+import { FacebookService } from './service/facebook.service';
+
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ScheduleEventComponent } from './schedule-event/schedule-event.component';
 import { ScheduleNewEventComponent } from './schedule-new-event/schedule-new-event.component';
@@ -33,7 +35,7 @@ import { FooterInfoComponent } from './footer-info/footer-info.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [UserService],
+  providers: [UserService, FacebookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
