@@ -14,6 +14,7 @@ import { ScheduleEventComponent } from './schedule-event/schedule-event.componen
 import { ScheduleNewEventComponent } from './schedule-new-event/schedule-new-event.component';
 import { ScheduleRunEventComponent } from './schedule-run-event/schedule-run-event.component';
 import { AboutComponent } from './about/about.component';
+import { FooterInfoComponent } from './footer-info/footer-info.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AboutComponent } from './about/about.component';
     ScheduleEventComponent,
     ScheduleNewEventComponent,
     ScheduleRunEventComponent,
-    AboutComponent
+    AboutComponent,
+    FooterInfoComponent
   ],
   imports: [
     BrowserModule,
