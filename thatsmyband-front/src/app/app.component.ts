@@ -19,13 +19,20 @@ export class AppComponent implements OnInit {
   	) { }
 
   ngOnInit() {
-  	this.facebookService.init(this.connectionCallBack);
+  	this.facebookService.init(this);
   }
 
-  connectionCallBack(token, userName, userId) {
-  	this.userId = userId;
-  	this.token = token;
-  	this.userName = userName;
+  facebookConnectionCallBack() {
+    this.facebookService.me(this);
+  }
+
+  facebookUserDataUpdate(user) {
+    this.userId = user.id;
+    this.userName = user.name;
+  }
+
+  facebookTokenUpdate(token) {
+    this.userToken = token;
   }
 }
 
