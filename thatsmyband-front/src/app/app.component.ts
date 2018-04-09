@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   userId = 'Empty';
   userToken = 'Empty';
   userName = 'Empty';
+  isUserConnectedIntoFacebook = false;
 
   constructor(
   	private facebookService: FacebookService
@@ -22,17 +23,22 @@ export class AppComponent implements OnInit {
   	this.facebookService.init(this);
   }
 
-  facebookConnectionCallBack() {
-    this.facebookService.me(this);
+  facebookConnectionCallBack(response) {
+    if (response.status === 'connected') {
+      this.userToken = response.authResponse.accessToken;
+      this.facebookService.me(this);
+      this.isUserConnectedIntoFacebook = true;
+    }
+    else
+    {
+      // Si l'utilisateur n'est pas connecté à facebook
+      this.isUserConnectedIntoFacebook = false
+    }
   }
 
   facebookUserDataUpdate(user) {
     this.userId = user.id;
     this.userName = user.name;
-  }
-
-  facebookTokenUpdate(token) {
-    this.userToken = token;
   }
 }
 

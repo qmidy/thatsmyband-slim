@@ -22,25 +22,10 @@ export class FacebookService{
     	});
 
 	    FB.getLoginStatus(response => {
-	        this.statusChangeCallback(response);
-	        component.facebookConnectionCallBack();
+	    	console.log(response);
+	        component.facebookConnectionCallBack(response);
 	    });
 	 }
-
-	statusChangeCallback(response: any) {
-	    if (response.status === 'connected') {
-	        console.log('connected in facebook');
-	    } else {
-	        this.login();
-	    }
-	}
-
-	login() {
-	  FB.login((result: any) => {
-	    this.loged = true;
-	    this.token = result;
-	  }, { scope: 'user_friends' });
-	}
 
 	me(component) {
 	    FB.api('/me?fields=id,name,first_name,gender,picture.width(150).height(150),age_range,friends',
@@ -49,7 +34,6 @@ export class FacebookService{
 	                this.user = result;
 	                component.facebookUserDataUpdate(this.user);
 	                console.log(this.user);
-	                component.facebookTokenUpdate(this.token);
 	            } else {
 	                console.log(result.error);
 	            }
