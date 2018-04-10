@@ -2,28 +2,7 @@
 
 	<!-- Si l'utilisateur n'est pas connecté à FB : Affichage d'une box de connexion -->
 	<ng-template #notconnectedtemplate>
-		<div class="container-fluid thatsmyband-maincontent">
-
-			<div class="row">
-				<div class="span6" style="float: none; margin: 0 auto; margin-top:50px; margin-bottom: 50px;">
-					<img src="assets/resources/046-flash.svg" height="100">
-				</div>
-			</div>
-			<div class="row text-white">
-				<div class="span6" style="float: none; margin: 0 auto;">
-				  	<h1> {{title}} </h1>
-				 </div>
-			</div>
-			<div class="row">
-				<div class="fb-login-button span6" style="float: none; margin: 0 auto;" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
-			</div>
-			<div class="row text-white">
-				<div class="span6" style="float: none; margin: 0 auto; margin-top:50px;">
-				  	<p class="text-center"> The application requires to be authenticated into Facebook ! </p>
-				 </div>
-			</div>
-
-		</div>
+		<app-not-connected></app-not-connected>	
 	</ng-template>
 
 	<ng-template #connectedtemplate>

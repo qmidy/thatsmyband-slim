@@ -17,6 +17,7 @@ import { ScheduleNewEventComponent } from './schedule-new-event/schedule-new-eve
 import { ScheduleRunEventComponent } from './schedule-run-event/schedule-run-event.component';
 import { AboutComponent } from './about/about.component';
 import { FooterInfoComponent } from './footer-info/footer-info.component';
+import { NotConnectedComponent } from './not-connected/not-connected.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FooterInfoComponent } from './footer-info/footer-info.component';
     ScheduleNewEventComponent,
     ScheduleRunEventComponent,
     AboutComponent,
-    FooterInfoComponent
+    FooterInfoComponent,
+    NotConnectedComponent
   ],
   imports: [
     BrowserModule,
