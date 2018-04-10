@@ -17,7 +17,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getUser() : Observable<User> {
-  	return this.http.get<User>(this.userUrl).pipe();
+  getUser(userId, userToken) : Observable<User> {
+  	return this.http.get<User>(this.userUrl+"?userId="+userId+"&userToken="+userToken).pipe();
   	}
 }
