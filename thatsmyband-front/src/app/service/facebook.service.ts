@@ -25,6 +25,10 @@ export class FacebookService{
 	    	console.log(response);
 	        component.facebookConnectionCallBack(response);
 	    });
+
+	    FB.Event.subscribe('auth.login', function() {
+	    	window.location.href = '#';
+	    });
 	 }
 
 	me(component) {
