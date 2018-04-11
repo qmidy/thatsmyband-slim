@@ -18,6 +18,7 @@ import { ScheduleRunEventComponent } from './schedule-run-event/schedule-run-eve
 import { AboutComponent } from './about/about.component';
 import { FooterInfoComponent } from './footer-info/footer-info.component';
 import { NotConnectedComponent } from './not-connected/not-connected.component';
+import { FirstConnectionComponent } from './first-connection/first-connection.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NotConnectedComponent } from './not-connected/not-connected.component';
     ScheduleRunEventComponent,
     AboutComponent,
     FooterInfoComponent,
-    NotConnectedComponent
+    NotConnectedComponent,
+    FirstConnectionComponent
   ],
   imports: [
     BrowserModule,
