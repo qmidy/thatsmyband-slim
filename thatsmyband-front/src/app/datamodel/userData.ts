@@ -1,8 +1,7 @@
 import { Band } from '../datamodel/band';
 
-export class User {
+export class UserData {
 	Id: string;
-	Name: string;
 	CashFlow: number;
 	CurrentTime: number;
 	

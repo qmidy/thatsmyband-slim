@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { User } from '../datamodel/user';
+import { UserData } from '../datamodel/userData';
 import { UserService } from '../service/user.service';
 
 import { ActivatedRoute } from '@angular/router';
@@ -13,7 +13,7 @@ import { Location } from '@angular/common';
 })
 export class BandComponent implements OnInit {
 
-  user: User;
+  user: UserData;
 
   constructor(
   	private route: ActivatedRoute,

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FacebookService } from './service/facebook.service';
 
-import { User } from './datamodel/user';
+import { UserData } from './datamodel/userData';
 import { UserService } from './service/user.service';
 
 

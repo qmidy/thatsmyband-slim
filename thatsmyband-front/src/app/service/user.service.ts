@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from '../datamodel/user';
+import { UserData } from '../datamodel/userData';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
@@ -20,7 +20,7 @@ export class UserService {
   userName = 'Empty';
   isUserConnectedIntoFacebook = false;
   isUserAlreadyExisting = false;
-  user: User;
+  user: UserData;
 
   private userUrl = "http://localhost:3000/userdata";
 
@@ -53,11 +53,11 @@ export class UserService {
   }
 
   // Gestion de l'utilisateur
-  getUser() : Observable<User> {
+  getUser() : Observable<UserData> {
     return this.getUserWithId(this.userId, this.userToken);
   }
 
-  private getUserWithId(userId, userToken) : Observable<User> {
-  	return this.http.get<User>(this.userUrl+"?userId="+userId+"&userToken="+userToken).pipe();
+  private getUserWithId(userId, userToken) : Observable<UserData> {
+  	return this.http.get<UserData>(this.userUrl+"?userId="+userId+"&userToken="+userToken).pipe();
   }
 }
