@@ -1,3 +1,2 @@
-démarrage newback => node index.hs (localhost:8888)
-démarrage back => lancer wamp (localhost)
+démarrage newback => npm start (localhost:3000)
 démarrage front => ng serve (localhost:4200)
