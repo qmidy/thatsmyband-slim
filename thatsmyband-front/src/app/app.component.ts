@@ -48,7 +48,11 @@ export class AppComponent implements OnInit {
   getUser() {
     this.userService.getUser().subscribe((user) => {
         if(user != null)
+        {
           this.isUserAlreadyExisting = true;
+          console.log("l'utilsateur a déjà un compte");
+        }
+        console.log("l'utilisateur n'a pas de compte");
       });
   }
 }

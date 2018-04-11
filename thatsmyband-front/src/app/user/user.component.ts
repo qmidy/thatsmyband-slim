@@ -13,6 +13,7 @@ import { Location } from '@angular/common';
 export class UserComponent implements OnInit {
 
   user: User;
+  userName;
 
   constructor(
   	private route: ActivatedRoute,
@@ -25,7 +26,10 @@ export class UserComponent implements OnInit {
   }
 
   getUser() : void {
-  	this.userService.getUser().subscribe((user) => this.user = user);
+  	this.userService.getUser().subscribe((user) => {
+      this.user = user;
+      this.userName = this.userService.userName;
+    });
   }
 
 }

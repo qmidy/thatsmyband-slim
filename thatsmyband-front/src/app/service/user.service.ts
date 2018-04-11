@@ -22,7 +22,7 @@ export class UserService {
   isUserAlreadyExisting = false;
   user: User;
 
-  private userUrl = "http://localhost:8888/userdata";
+  private userUrl = "http://localhost:3000/userdata";
 
   constructor(
   	private http: HttpClient,
