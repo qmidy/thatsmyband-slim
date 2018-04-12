@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var userdataRouter = require('./routes/userdata');
 
+var facebookapi = require('./facebookapi');
+
 var app = express();
 
 app.use(logger('dev'));
@@ -18,9 +20,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Cors
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, UserId, UserToken");
   next();
 });
+
+// Récupèration du token et de l'id de l'utilisateur dans les headers de la requête
+app.use(function(req, res, next) {
+    console.log("Request UserId : " + req.get("UserId"));
+    console.log("Request UserToken : " + req.get("UserToken"));
+    // On vérifie que le token est bien le bon pour l'id en appelant l'API Facebook (sinon on renvoie un forbidden)
+    facebookapi.GetUserId(req.get("UserToken"));
+
+    next();
+  });
 
 // Routing
 app.use('/', indexRouter);

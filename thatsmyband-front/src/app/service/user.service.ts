@@ -8,10 +8,6 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { FacebookService } from './facebook.service';
 
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
-
 @Injectable()
 export class UserService {
 
@@ -52,12 +48,7 @@ export class UserService {
     this.getUser();
   }
 
-  // Gestion de l'utilisateur
   getUser() : Observable<UserData> {
-    return this.getUserWithId(this.userId, this.userToken);
-  }
-
-  private getUserWithId(userId, userToken) : Observable<UserData> {
-  	return this.http.get<UserData>(this.userUrl+"?userId="+userId+"&userToken="+userToken).pipe();
+  	return this.http.get<UserData>(this.userUrl, {headers: new HttpHeaders({'Content-Type': 'application/json', 'UserId': this.userId, 'UserToken': this.userToken})}).pipe();
   }
 }
