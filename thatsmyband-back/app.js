@@ -29,7 +29,7 @@ app.use(function(req, res, next) {
     console.log("Request UserId : " + req.get("UserId"));
     console.log("Request UserToken : " + req.get("UserToken"));
     // On vérifie que le token est bien le bon pour l'id en appelant l'API Facebook (sinon on renvoie un forbidden)
-    facebookapi.GetUserId(req.get("UserToken"));
+    //facebookapi.GetUserId(req.get("UserToken"));
 
     next();
   });

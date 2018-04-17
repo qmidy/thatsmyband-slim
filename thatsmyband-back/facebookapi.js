@@ -7,8 +7,8 @@ var passport = require('passport-facebook');
 exports.GetUserId = function(userToken) {
 
 	passport.use(new FacebookTokenStrategy({
-      clientID: ‘793344530828539’,
-      clientSecret: ‘ff24e4ded643902337fae6aaa87594f3’
+      clientID: "793344530828539",
+      clientSecret: "ff24e4ded643902337fae6aaa87594f3"
     },
     function (accessToken, refreshToken, profile, done) {
       User.upsertFbUser(accessToken, refreshToken, profile, function(err, user) {
