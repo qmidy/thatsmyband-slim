@@ -1,7 +1,6 @@
 {
   "name": "test-back",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,11 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
     "http-errors": "^1.6.3",
     "mongoose": "^5.0.15",
     "morgan": "^1.9.0",
     "passport": "^0.4.0"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }

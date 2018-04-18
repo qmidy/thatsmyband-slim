@@ -1,4 +1,4 @@
-REM # Création du package.json
+﻿REM # Création du package.json
 
 call npm init entry point: (server.js) --force
 
@@ -9,3 +9,4 @@ call npm install passport --save
 call npm install morgan --save
 call npm install http-errors --save
 call npm install cookie-parser --save
+call npm install body-parser --save

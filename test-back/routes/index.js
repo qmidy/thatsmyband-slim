@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  /* Appel de Healthcheck à la base */
+  /* Appel de Healthcheck */
   res.send('Ok');
 });
 
