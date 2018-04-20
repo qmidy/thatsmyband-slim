@@ -1,0 +1,1 @@
+--> le fichier \sources\config\config.js doit tenir tous les paramètres du serveur

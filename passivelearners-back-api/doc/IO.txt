@@ -1,0 +1,30 @@
+--> endpoints :
+
+--> Healthcheck
+'/' => Renvoie "Ok" si le serveur est UP / Peut donner des infos sur la dépendances (DEV/PROD) (GET) -- Ne nécessite pas d'authentification 
+
+--> Metadonnées
+'/overalls' => Renvoie toutes les overalls du serveur (DEV) (GET) -- Ne nécessite pas d'authentification 
+'/overalls/public' => Renvoie les overalls publiques et accessibles sans login (DEV/PROD) (GET) -- Ne nécessite pas d'authentification
+'/overalls/public/{:overallId}' => Renvoie l'overall publique {:overallId} (DEV/PROD) (GET) -- Ne nécessite pas d'authentification
+
+'/overalls/{:userId}' => Renvoie toutes les overalls pour un overallId donné (DEV/PROD) (GET) -- Nécessite une authentification 
+'/overalls/{:userId}/{:overallId}' => Renvoie l'overall {:overallId} du {:userId} (DEV/PROD) (GET) -- Nécessite une authentification 
+
+--> Accès aux données complètes
+'/completedatas' => Renvoie toutes les données complètes du serveur (DEV) (GET) -- Ne nécessite pas d'authentification 
+'/completedatas/public' => Renvoie toutes les données complètes publiques et accessibles sans login (DEV/PROD) (GET) -- Ne nécessite pas d'authentification
+'/completedatas/public/{:overallId}' => Renvoie la donnée complète {:overallId} (DEV/PROD) (GET) -- Ne nécessite pas d'authentification
+
+'/completedatas/{:userId}' => Renvoie toutes les données complètes pour un {:overallId} donné (DEV/PROD) (GET/POST) -- Nécessite une authentification (Le POST se fera avec une donnée complète)
+'/completedatas/{:userId}/{:overallId}' => Renvoie la donnée complète {:overallId} du {:userId} (DEV/PROD) (GET/PUT/DELETE) -- Nécessite une authentification (Le PUT se fera avec une donnée complète)
+
+--> Accès aux données minimisées
+'/mindatas' => Renvoie toutes les données minimisées du serveur (DEV) (GET) -- Ne nécessite pas d'authentification 
+'/mindatas/public' => Renvoie toutes les données minimisées publiques et accessibles sans login (DEV/PROD) (GET) -- Ne nécessite pas d'authentification
+'/mindatas/public/{:overallId}' => Renvoie la donnée minimisée {:overallId} (DEV/PROD) (GET) -- Ne nécessite pas d'authentification
+
+'/mindatas/{:userId}' => Renvoie toutes les données minimisées pour un {:overallId} donné (DEV/PROD) (GET) -- Nécessite une authentification
+'/mindatas/{:userId}/{:overallId}' => Renvoie la donnée minimisée {:overallId} du {:userId} (DEV/PROD) (GET) -- Nécessite une authentification
+
+
